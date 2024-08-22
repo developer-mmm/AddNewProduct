@@ -17,7 +17,7 @@ function Login() {
     const userPassword = password.current.value;
 
     if (!username || !userPassword) {
-      setError("Iltimos, barcha maydonlarni to'ldiring....");
+      setError("please enter what's asked here...");
       return;
     }
 
@@ -28,7 +28,7 @@ function Login() {
       })
       .then((data) => dispatch(loginAction(data.data)))
       .catch(() =>
-        setError("Login muvaffaqiyatsiz. Iltimos, qayta urinib ko'ring.")
+        setError("Something went wrong ❌! Try again")
       );
   };
 
